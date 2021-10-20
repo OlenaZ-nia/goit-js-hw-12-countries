@@ -1,0 +1,62 @@
+.query-container {
+  display: block;
+  padding: 100px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(250, 186, 68);
+}
+.search-input {
+  height: 60px;
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  border-color: rgb(248, 151, 94);
+  background-color: rgba(255, 165, 0, 0.2);
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(255, 165, 0);
+  &:focus {
+    outline: rgb(255, 165, 0);
+  }
+  &:hover {
+    border-color: rgb(255, 165, 0);
+  }
+}
+.search-input::placeholder {
+  color: rgb(250, 186, 68);
+  font-size: 35px;
+  font-family: 'Material Icons';
+  transform: translate(0, 25%);
+  text-align: start;
+}
+
+.country-container {
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 100px;
+}
+h1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: rgb(255, 165, 0);
+}
+.flex-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex {
+  margin-left: 30px;
+}
+.span {
+  font-weight: normal;
+  color: rgb(255, 165, 0);
+}
+.countries-list {
+  color: rgb(255, 165, 0);
+}

@@ -1,0 +1,16 @@
+{{#each this}}
+<h1>{{name}}</h1>
+<div class="flex-container">
+    <div>
+        <h2>Capital: <span class="span">{{capital}}</span></h2>
+        <h2>Population: <span class="span">{{population}} </span></h2>
+        <h2>Languages:</h2>
+        <ul>
+            {{#each languages}}
+            <li class="span">{{name}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="flex"><img src="{{flag}}" alt="flaf" width="320"></div>
+</div>
+{{/each}}
