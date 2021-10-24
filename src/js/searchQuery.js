@@ -10,17 +10,17 @@ import fetchCountries from './fetchCountries.js';
 const debounce = require('lodash.debounce');
 input.addEventListener('input', debounce(onSearch, 500))
 
-function onSearch() {
+function onSearch(e) {
+    e.preventDefault()
     list.innerHTML = '';
     countryContainer.innerHTML = '';
-    let searchQuery = input.value;
-    if (!input.value) {
+    let searchQuery = input.value.trim();
+    if (searchQuery === '') {
         return
     };
     fetchCountries(searchQuery).then(data => {
         creatMarkup(data);
     });
-    
 }
 
 function creatMarkup(data) {
@@ -37,6 +37,5 @@ function creatMarkup(data) {
     if (data.length === 1) {
         const markup = countryTemplate(data);
         countryContainer.insertAdjacentHTML('beforeend', markup);
-        input.value = "";
     }
 }
